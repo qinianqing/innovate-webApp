@@ -27,9 +27,11 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "inquirer": "^8.1.2",
     "lint-staged": "^9.5.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "shelljs": "^0.8.4",
     "vue-template-compiler": "^2.6.11"
   },
   "gitHooks": {
