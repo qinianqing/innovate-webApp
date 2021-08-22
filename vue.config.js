@@ -17,5 +17,13 @@ module.exports = {
       .rule('images')
       .test(/\.(png|jpe?g|gif|webp|svg)(\?.*)?$/)
       .exclude.add(resolve('./src/assets/icons'))
+  },
+  css: {
+    loaderOptions: {
+      sass: {
+        // 这里的选项会传递给 sass-loader
+        prependData: '@import "@/assets/styles/_variables.scss";'
+      }
+    }
   }
 }
