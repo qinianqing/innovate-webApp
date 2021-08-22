@@ -11,6 +11,7 @@
         label="描述信息"
       />
     </van-cell-group>
+    <my-header></my-header>
   </div>
 </template>
 
