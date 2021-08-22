@@ -3,18 +3,24 @@
     :class="svgClass"
     aria-hidden="true"
   >
-    <use xlink:href="symbolName" />
+    <use :xlink:href="symbolName" />
   </svg>
 </template>
 
 <script>
+
+const req = require.context('@/assets/icons/svg', false, /\.svg$/)
+const requireAll = (requireContext) => requireContext.keys().map(requireContext)
+requireAll(req)
+
 export default {
+  name: 'svg-icon',
   props: {
     icon: {
       type: String,
       require: true
     },
-    class: {
+    className: {
       type: String,
       default: ''
     }
@@ -24,8 +30,8 @@ export default {
       return `#icon-${this.icon}`
     },
     svgClass () {
-      if (this.class) {
-        return `svg-icon${this.class}`
+      if (this.className) {
+        return `svg-icon ${this.className}`
       } else {
         return 'svg-icon'
       }
@@ -36,7 +42,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.svg-class {
+.svg-icon {
   width: 1em;
   height: 1em;
   vertical-align: -0.15em;

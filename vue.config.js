@@ -8,8 +8,8 @@ module.exports = {
       .test(/\.svg$/)
       .include.add(resolve('./src/assets/icons'))
       .end()
-      .use('svg-svg-sprite-loader')
-      .loader('svg-svg-sprite-loader')
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
       .options({
         symbolId: 'icon-[name]'
       })
