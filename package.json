@@ -31,6 +31,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "inquirer": "^8.1.2",
     "lint-staged": "^9.5.0",
+    "postcss-px-to-viewport": "^1.1.1",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
     "shelljs": "^0.8.4",
