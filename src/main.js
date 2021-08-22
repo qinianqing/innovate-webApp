@@ -7,6 +7,8 @@ import 'normalize.css/normalize.css'
 // 引用vant-ui
 import '@/plugins/vant-ui'
 import '@/plugins/common'
+// 定制主题色
+import '@/assets/styles/_theme.scss'
 
 Vue.config.productionTip = false
 

@@ -12,6 +12,7 @@
       />
     </van-cell-group>
     <my-header></my-header>
+    <van-button type="primary">主要按钮</van-button>
   </div>
 </template>
 
