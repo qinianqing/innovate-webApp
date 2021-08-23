@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="42px" viewBox="0 0 43 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>xxxdpi/编组 2备份 2</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-118.000000, -136.000000)">
+            <g id="编组-2备份" transform="translate(118.333333, 136.000000)">
+                <rect id="矩形" stroke="#979797" fill="#D8D8D8" opacity="0" x="0" y="0" width="42" height="42"></rect>
+                <g id="编组" transform="translate(5.250000, 3.606859)">
+                    <path d="M26.2104475,0.622093799 L30.9496118,5.60788222 C31.3029642,5.97962293 31.5,6.47290533 31.5,6.98578842 L31.5,32.1931406 C31.5,33.2977101 30.6045695,34.1931406 29.5,34.1931406 L2,34.1931406 C0.8954305,34.1931406 1.3527075e-16,33.2977101 0,32.1931406 L0,13.3514106 L0,2 C-3.57315355e-16,0.8954305 0.8954305,2.02906125e-16 2,0 L24.7608356,0 C25.3088628,2.11977509e-15 25.8328825,0.224880455 26.2104475,0.622093799 Z" id="形状结合备份-2" stroke="#000000" stroke-width="3"></path>
+                    <rect id="矩形备份-3" fill="#000000" x="9.45" y="22.6431406" width="12.6" height="3.15" rx="1.5"></rect>
+                    <rect id="矩形备份-4" fill="#000000" x="9.45" y="14.6431406" width="12.6" height="3.15" rx="1.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,1 +1,15 @@
-<?xml version="1.0" standalone="no"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"><svg t="1572246626292" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1157" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48"><defs><style type="text/css"></style></defs><path d="M229.12 563.2l0 301.696 178.56 0L407.68 711.68c0-32.896 26.624-59.52 59.52-59.52l90.368 0c32.896 0 59.52 26.624 59.52 59.52l0 153.088 178.56 0L795.648 563.2 512.256 262.016 229.12 563.2z" p-id="1158"></path><path d="M555.776 160.896c-11.776-11.776-27.392-18.176-44.032-18.176-16.64 0-32.256 6.528-44.544 18.816L77.184 575.36l72.832 0L505.344 198.4c2.304-2.304 5.12-2.688 6.528-2.688 1.408 0 4.096 0.384 6.016 2.176l356.096 377.472 72.832 0L555.776 160.896z" p-id="1159"></path></svg>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>xxxdpi/编组 2备份 3</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-26.000000, -136.000000)">
+            <g id="编组-2备份" transform="translate(26.000000, 136.000000)">
+                <rect id="矩形" stroke="#979797" fill="#D8D8D8" opacity="0" x="0" y="0" width="42" height="42"></rect>
+                <g id="编组" transform="translate(5.250000, 4.260076)">
+                    <rect id="矩形备份-3" fill="#000000" x="9.45" y="21.9899241" width="12.6" height="3.15" rx="1.5"></rect>
+                    <path d="M17.4207129,0.459464832 L30.8121053,12.1002265 C31.2490823,12.4800784 31.5,13.0306608 31.5,13.6096568 L31.5,31.5399241 C31.5,32.6444936 30.6045695,33.5399241 29.5,33.5399241 L2,33.5399241 C0.8954305,33.5399241 1.3527075e-16,32.6444936 0,31.5399241 L0,13.6393826 C-1.04653863e-15,13.0432776 0.265902264,12.4782426 0.725227743,12.0982935 L14.8338353,0.427805925 C15.5877804,-0.195849293 16.6822563,-0.182454802 17.4207129,0.459464832 Z" id="形状结合备份-2" stroke="#000000" stroke-width="3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
