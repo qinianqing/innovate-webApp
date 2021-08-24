@@ -23,11 +23,22 @@
 </template>
 
 <script>
+import BaiduMap from '@/utils/baiduMap'
 export default {
   data () {
     return {
-      location: '郑州',
+      location: '',
       markText: '当前只开通河南郑州同城快递服务'
+    }
+  },
+  created () {
+    this.getLocation()
+  },
+  methods: {
+    async getLocation () {
+      const BDSdk = new BaiduMap()
+      const localMsg = await BDSdk.getLocation()
+      this.location = localMsg && localMsg.content ? localMsg.content.address_detail.city : '郑州'
     }
   }
 
