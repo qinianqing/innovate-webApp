@@ -18,6 +18,13 @@
           <span class="mark-text">{{markText}}</span>
         </div>
       </div>
+      <div class="swiper-contain">
+        <my-swiper
+          :images="images"
+          :swiperWidth="swiperWidth"
+          :swiperHeight="swiperHeight"
+        ></my-swiper>
+      </div>
     </div>
   </div>
 </template>
@@ -28,7 +35,17 @@ export default {
   data () {
     return {
       location: '',
-      markText: '当前只开通河南郑州同城快递服务'
+      markText: '当前只开通河南郑州同城快递服务',
+      images: [
+        'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png',
+        'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png',
+        'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png'
+      ],
+      swiperWidth: '688px',
+      swiperHeight: '291px',
+      swiperItemWidth: '688px',
+      swiperItemHeight: '291px'
+
     }
   },
   created () {
