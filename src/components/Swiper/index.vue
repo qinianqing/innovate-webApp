@@ -1,21 +1,19 @@
 <template>
-  <div>
-    <van-swipe
-      :autoplay="autoplay"
-      :with="swiperWidth"
-      :height="swiperHeight"
+  <van-swipe
+    :class="swiperClass"
+    :autoplay=autoplay
+  >
+    <van-swipe-item
+      v-for="(image, index) in images"
+      :key="index"
+      :class="swiperItemClass"
     >
-      <van-swipe-item
-        v-for="(image, index) in images"
-        :key="index"
-      >
-        <img
-          v-lazy="image"
-          class="item-images"
-        />
-      </van-swipe-item>
-    </van-swipe>
-  </div>
+      <img
+        v-lazy="image"
+        class="item-image"
+      />
+    </van-swipe-item>
+  </van-swipe>
 </template>
 
 <script>
@@ -23,31 +21,37 @@ export default {
   name: 'my-swiper',
   props: {
     autoplay: {
-      type: String,
-      default: '3000'
+      type: Number,
+      default: 3000
     },
     images: {
       type: Array
     },
-    swiperWidth: {
+    swiperClass: {
       type: String
     },
-    swiperHeight: {
+    imageClass: {
       type: String
-    },
-    swiperItemWidth: {
-      type: String
-    },
-    swiperItemHeight: {
-      type: String
+    }
+  },
+  computed: {
+    swiperItemClass () {
+      if (this.imageClass) {
+        return `items ${this.imageClass}`
+      } else {
+        return 'items'
+      }
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.item-images {
+.items {
   width: 100%;
   height: 100%;
+}
+.item-image {
+  width: 100%;
 }
 </style>

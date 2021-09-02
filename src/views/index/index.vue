@@ -21,8 +21,8 @@
       <div class="swiper-contain">
         <my-swiper
           :images="images"
-          :swiperWidth="swiperWidth"
-          :swiperHeight="swiperHeight"
+          swiperClass="swiper-box"
+          imageClass="swiper-image"
         ></my-swiper>
       </div>
     </div>
@@ -40,12 +40,7 @@ export default {
         'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png',
         'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png',
         'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png'
-      ],
-      swiperWidth: '688px',
-      swiperHeight: '291px',
-      swiperItemWidth: '688px',
-      swiperItemHeight: '291px'
-
+      ]
     }
   },
   created () {

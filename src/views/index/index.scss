@@ -60,5 +60,14 @@
   }
   .swiper-contain {
     margin-top: 30px;
+    height: 291px;
+    width: 688px;
+    .swiper-box {
+      width: 688px;
+      height: 291px;
+    }
+    .swiper-image {
+      border-radius: 10px;
+    }
   }
 }
