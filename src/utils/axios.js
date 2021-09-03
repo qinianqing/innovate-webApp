@@ -6,7 +6,7 @@
 import axios from 'axios'
 import store from '@/store'
 import errorHandle from './errorHandle'
-const CancelToken = axios.CancelToken
+// const CancelToken = axios.CancelToken
 const publicPath = [/^\/public/, /^\/login/] // 不带token白名单
 
 class HttpRequest {
@@ -48,11 +48,11 @@ class HttpRequest {
       if (!isPublic && token) {
         config.headers.Authorization = 'Bearer ' + token
       }
-      const key = config.url + '&' + config.method
-      this.removePending(key, true)
-      config.cancelToken = new CancelToken((c) => {
-        this.pending[key] = c
-      })
+      // const key = config.url + '&' + config.method
+      // this.removePending(key, true)
+      // config.cancelToken = new CancelToken((c) => {
+      //   this.pending[key] = c
+      // })
       return config
     }, (err) => {
       // debugger
@@ -65,8 +65,8 @@ class HttpRequest {
     instance.interceptors.response.use((res) => {
       // Any status code that lie within the range of 2xx cause this function to trigger
       // Do something with response data
-      const key = res.config.url + '&' + res.config.method
-      this.removePending(key)
+      // const key = res.config.url + '&' + res.config.method
+      // this.removePending(key)
       if (res.status === 200) {
         return Promise.resolve(res.data)
       } else {

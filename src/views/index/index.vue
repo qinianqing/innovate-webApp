@@ -25,6 +25,9 @@
           imageClass="swiper-image"
         ></my-swiper>
       </div>
+      <div class="main-content">
+        <my-list></my-list>
+      </div>
     </div>
   </div>
 </template>

@@ -5,7 +5,7 @@
  */
 
 import HttpRequest from './axios'
-const baseUrl = process.env.VUE_APP_BAIDU_URL
+const baseUrl = process.env.VUE_APP_BASE_URL
 
 const axios = new HttpRequest(baseUrl)
 
