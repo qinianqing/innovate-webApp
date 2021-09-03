@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="wrapp">
+    <slot></slot>
     <my-footer></my-footer>
   </div>
 </template>
@@ -16,4 +17,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapp {
+  padding-bottom: $footer-height;
+}
 </style>

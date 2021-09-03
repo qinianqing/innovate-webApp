@@ -6,9 +6,13 @@ import store from './store'
 import 'normalize.css/normalize.css'
 // 引用vant-ui
 import '@/plugins/vant-ui'
+// 基础插件引用
 import '@/plugins/common'
 // 定制主题色
 import '@/assets/styles/_theme.scss'
+// jsonp跨域处理
+import { VueJsonp } from 'vue-jsonp'
+Vue.use(VueJsonp)
 
 Vue.config.productionTip = false
 

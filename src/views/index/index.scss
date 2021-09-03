@@ -1,0 +1,73 @@
+.contain {
+  padding: 0 29px;
+  overflow: hidden;
+  .logo {
+    background-image: url('~@/assets/images/logo_index@2x.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-left: 34px;
+    margin-top: 100px;
+    width: 200px;
+    height: 68px;
+    background-position: 0 0;
+    z-index: 100;
+  }
+  .location {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    .place,
+    .mark {
+      background-color: $primary-color;
+    }
+    .place {
+      width: 150px;
+      height: 63px;
+      line-height: 63px;
+      border-radius: 32px;
+      margin-right: 86px;
+      padding-right: 27px;
+      .location-icon {
+        padding: 0px 13px 0px 25px;
+        width: 28px;
+        height: 34px;
+      }
+      .location-text {
+        font-size: 28px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #ffffff;
+      }
+    }
+    .mark {
+      width: 454px;
+      height: 44px;
+      line-height: 40px;
+      border-radius: 22px;
+      .careful-icon {
+        padding: 0px 14px 0px 21px;
+        width: 28px;
+        height: 28px;
+      }
+      .mark-text {
+        font-size: 24px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #ffffff;
+      }
+    }
+  }
+  .swiper-contain {
+    margin-top: 30px;
+    height: 291px;
+    width: 688px;
+    .swiper-box {
+      width: 688px;
+      height: 291px;
+    }
+    .swiper-image {
+      border-radius: 10px;
+    }
+  }
+}
