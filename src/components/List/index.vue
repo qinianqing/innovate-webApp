@@ -19,7 +19,7 @@
             class="list-item"
             :title="index"
           >
-            {{item.topic}}
+            <slot :item="item"></slot>
           </van-cell>
         </van-list>
       </van-pull-refresh>
@@ -28,27 +28,37 @@
 </template>
 
 <script>
-import { getFoodList } from '@/api/food'
+
 export default {
   name: 'my-list',
+  props: {
+    offset: {
+      type: Number
+    },
+    pageSize: {
+      type: Number
+    },
+    listFunction: {
+      type: Function
+    }
+  },
+
   data () {
     return {
-      saleDataList: [],
-      list: [],
       isLoading: false,
       loading: false,
       finished: false,
-      offset: 30,
       parmas: {
         currentPage: 1,
-        pageSize: 10
+        pageSize: this.pageSize
       },
       pageInfo: {
         currentPage: 1,
-        pageSize: 10,
+        pageSize: this.pageSize,
         totalPage: 0,
         totalRecords: 0
-      }
+      },
+      list: []
     }
   },
   created: function () {
@@ -74,7 +84,10 @@ export default {
     async onLoad () {
       // 调用请求数据方法
       this.parmas.currentPage = this.pageInfo.currentPage
-      const res = await this._getFoodList()
+      const res = await this.listFunction({
+        page_index: this.parmas.currentPage,
+        page_size: this.parmas.pageSize
+      })
       const data = res.data.list
       if (data.length === 0) {
         this.finished = true
@@ -103,13 +116,6 @@ export default {
         // this.loading = true
         this.onLoad()
       }
-    },
-    async _getFoodList () {
-      const result = await getFoodList({
-        page_index: this.parmas.currentPage,
-        page_size: this.parmas.pageSize
-      })
-      return result
     }
   }
 }
@@ -117,7 +123,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/_mixin.scss';
 .wrapper {
-  margin-bottom: 80px;
+  @include resH-to(big-screens) {
+    margin-bottom: 32px;
+  }
+  margin-bottom: 32px;
 }
 </style>

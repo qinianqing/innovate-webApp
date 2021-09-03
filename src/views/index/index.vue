@@ -26,7 +26,16 @@
         ></my-swiper>
       </div>
       <div class="main-content">
-        <my-list></my-list>
+        <my-list
+          :formatList="list"
+          :offset=30
+          :pageSize=10
+          :listFunction="listFunction"
+        >
+          <template v-slot:default="slotProps">
+            {{ slotProps.item.topic }}
+          </template>
+        </my-list>
       </div>
     </div>
   </div>
@@ -34,6 +43,7 @@
 
 <script>
 import BaiduMap from '@/utils/baiduMap'
+import { getFoodList } from '@/api/food'
 export default {
   data () {
     return {
@@ -43,7 +53,10 @@ export default {
         'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png',
         'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png',
         'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png'
-      ]
+      ],
+      list: [],
+      listFunction: this._getFoodList
+
     }
   },
   created () {
@@ -54,6 +67,10 @@ export default {
       const BDSdk = new BaiduMap()
       const localMsg = await BDSdk.getLocation()
       this.location = localMsg && localMsg.content ? localMsg.content.address_detail.city : '郑州'
+    },
+    async _getFoodList (parmas) {
+      const result = await getFoodList(parmas)
+      return result
     }
   }
 
