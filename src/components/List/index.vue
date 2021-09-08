@@ -1,5 +1,6 @@
 <template>
   <div>
+    <slot name="title"></slot>
     <div class="wrapper">
       <van-pull-refresh
         v-model="isLoading"
@@ -8,7 +9,7 @@
         <van-list
           v-model="loading"
           :finished="finished"
-          finished-text="没有更多了"
+          finished-text=""
           @load="onLoadList"
           :offset="offset"
           class="content"
@@ -17,9 +18,11 @@
             v-for="(item,index) in list"
             :key="item+index"
             class="list-item"
-            :title="index"
           >
-            <slot :item="item"></slot>
+            <slot
+              name="list"
+              :item="item"
+            ></slot>
           </van-cell>
         </van-list>
       </van-pull-refresh>
@@ -72,10 +75,12 @@ export default {
     *  下拉刷新方法
      */
     onRefresh () {
-      this.pageInfo.currentPage = 1
-      this.finished = false // 不写这句会导致你上拉到底过后在下拉刷新将不能触发下拉加载事件
-      this.loading = true
-      this.onLoad()
+      setTimeout(() => {
+        this.pageInfo.currentPage = 1
+        this.finished = false // 不写这句会导致你上拉到底过后在下拉刷新将不能触发下拉加载事件
+        this.loading = true
+        this.onLoad()
+      }, 1000)
     },
     /**
     *  上拉加载方法
@@ -111,11 +116,13 @@ export default {
     },
     async onLoadList () {
       // 滚动加载时触发，list组件定义的方法
-      if ((this.pageInfo.totalPage > this.pageInfo.currentPage) && (this.pageInfo.totalPage !== this.pageInfo.currentPage)) {
-        this.pageInfo.currentPage++
-        // this.loading = true
-        this.onLoad()
-      }
+      setTimeout(() => {
+        if ((this.pageInfo.totalPage > this.pageInfo.currentPage) && (this.pageInfo.totalPage !== this.pageInfo.currentPage)) {
+          this.pageInfo.currentPage++
+          // this.loading = true
+          this.onLoad()
+        }
+      }, 1000)
     }
   }
 }
@@ -129,5 +136,19 @@ export default {
     margin-bottom: 32px;
   }
   margin-bottom: 32px;
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  .list-item:nth-child(2n + 1) {
+    margin-right: 24px;
+  }
+}
+.list-item {
+  width: 333.49px;
+  background: #eaeaea;
+  box-shadow: 0px 6px 12px 0px rgba(232, 232, 232, 0.49);
+  margin-bottom: 25px;
+  border-radius: 8px;
 }
 </style>

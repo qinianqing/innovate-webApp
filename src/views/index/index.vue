@@ -29,11 +29,43 @@
         <my-list
           :formatList="list"
           :offset=30
-          :pageSize=10
+          :pageSize=3
           :listFunction="listFunction"
         >
-          <template v-slot:default="slotProps">
-            {{ slotProps.item.topic }}
+          <template v-slot:title>
+            <div class="list-title">
+              <div class="line-left"></div>
+              <div class="title-middle">{{title}}</div>
+              <div class="line-right"></div>
+            </div>
+          </template>
+          <template v-slot:list="slotProps">
+            <div class="food-contain">
+              <div class="food-image"> <img :src="slotProps.item.picture"> </div>
+              <div class="food-text">
+                <div class="food-title">{{slotProps.item.title}}</div>
+                <div class="price">{{slotProps.item.price | price}}</div>
+                <div class="discount-price">{{slotProps.item.discount_price | price}}</div>
+                <div class="price-contain">
+                  <svg-icon
+                    icon="icon_reduce"
+                    class="icon-reduce"
+                    @click.native="reduce(slotProps.item)"
+                    v-show="slotProps.item.status"
+                  ></svg-icon>
+                  <div
+                    v-show="slotProps.item.status"
+                    class="food-num"
+                  >{{slotProps.item.num}}</div>
+                  <svg-icon
+                    icon="icon_add"
+                    class="icon-add"
+                    @click.native="add(slotProps.item)"
+                  ></svg-icon>
+                </div>
+              </div>
+
+            </div>
           </template>
         </my-list>
       </div>
@@ -55,8 +87,8 @@ export default {
         'https://cdn-scp.banu.cn/ideas-super-test/ideas/1630047965541-171105486.png'
       ],
       list: [],
-      listFunction: this._getFoodList
-
+      listFunction: this._getFoodList,
+      title: '冷吃炸鸡'
     }
   },
   created () {
@@ -70,7 +102,26 @@ export default {
     },
     async _getFoodList (parmas) {
       const result = await getFoodList(parmas)
+      console.log(result)
+      result.data.list = result.data.list.map(item => {
+        item.num = 0
+        item.status = false
+        return item
+      })
       return result
+    },
+    add (e) {
+      e.num++
+      e.status = true
+    },
+    reduce (e) {
+      if (e.num === 0) {
+        return
+      }
+      e.num--
+      if (e.num === 0) {
+        e.status = false
+      }
     }
   }
 

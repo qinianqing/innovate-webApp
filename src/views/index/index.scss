@@ -6,7 +6,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin-left: 34px;
-    margin-top: 100px;
+    // margin-top: 100px;
     width: 200px;
     height: 68px;
     background-position: 0 0;
@@ -68,6 +68,100 @@
     }
     .swiper-image {
       border-radius: 10px;
+    }
+  }
+  .main-content {
+    .list-title {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 36px 0px 31px 0px;
+      .line-left,
+      .line-right {
+        width: 188px;
+        height: 1px;
+        background: #d8d8d8;
+        border-radius: 2px;
+      }
+      .title-middle {
+        width: 112px;
+        font-size: 28px;
+        font-family: PingFangSC-Semibold, PingFang SC;
+        font-weight: 600;
+        color: #333333;
+        margin: 0px 47px;
+      }
+    }
+    .food-contain {
+      text-align: center;
+      .food-image {
+        width: 333.49px;
+        height: 319px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 200.49px;
+          height: 209px;
+        }
+      }
+      .food-text {
+        width: 333.49px;
+        height: 129px;
+        background-color: #ffffff;
+        position: relative;
+        .food-title {
+          font-size: 28px;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: #333333;
+          position: absolute;
+          left: 19px;
+          top: 25px;
+        }
+        .price {
+          font-size: 28px;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: #cc563a;
+          position: absolute;
+          left: 21px;
+          top: 69px;
+        }
+        .discount-price {
+          font-size: 24px;
+          font-family: PingFangSC-Semibold, PingFang SC;
+          font-weight: 600;
+          color: #8e8e8e;
+          text-decoration: line-through;
+          position: absolute;
+          left: 93px;
+          top: 71px;
+        }
+        .price-contain {
+          top: 66px;
+          right: 24px;
+          display: flex;
+          position: absolute;
+          .icon-reduce {
+            width: 40px;
+            height: 40px;
+          }
+          .icon-add {
+            width: 40px;
+            height: 40px;
+          }
+          .food-num {
+            font-size: 28px;
+            font-family: PingFangSC-Semibold, PingFang SC;
+            font-weight: 600;
+            color: #181818;
+            margin: 0px 12px;
+          }
+        }
+      }
     }
   }
 }

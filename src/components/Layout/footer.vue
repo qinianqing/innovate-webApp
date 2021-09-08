@@ -25,7 +25,7 @@ export default {
   data () {
     return {
       tabs: [
-        { name: '首页', icon: 'home', path: '/', selected: false },
+        { name: '首页', icon: 'home', path: '/index', selected: false },
         { name: '订单', icon: 'order', path: '/order', selected: false },
         { name: '我的', icon: 'person', path: '/center', selected: false }
       ]
