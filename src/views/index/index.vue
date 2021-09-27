@@ -29,7 +29,7 @@
         <my-list
           :formatList="list"
           :offset=30
-          :pageSize=3
+          :pageSize=5
           :listFunction="listFunction"
         >
           <template v-slot:title>

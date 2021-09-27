@@ -1,7 +1,5 @@
 <template>
-  <div>
-
-  </div>
+  <svg-icon icon="cart"></svg-icon>
 </template>
 
 <script>

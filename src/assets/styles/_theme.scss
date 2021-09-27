@@ -8,3 +8,17 @@ body {
   color: $primary-color;
   padding: 0;
 }
+.van-list__loading{
+  width: 100%;
+  height: 60px;
+  .van-loading{
+    line-height: 20px;
+    bottom: 23px;
+    height: 31px;
+    position: absolute;
+    left: 265px;
+
+  }
+    
+
+}
